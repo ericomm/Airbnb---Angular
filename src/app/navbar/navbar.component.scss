@@ -1,0 +1,35 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 140px;
+  background-color: white;
+  box-shadow: 0 4px 16px #cfcfcf;
+
+  &-menu {
+    a {
+      padding-bottom: 4px;
+
+      &:hover {
+        border-bottom: 2px solid black;
+      }
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+
+  li {
+    padding: 10px 16px;
+
+    a {
+      font-size: 16px;
+      text-decoration: none;
+      color: black;
+      cursor: pointer;
+    }
+  }
+}
