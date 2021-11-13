@@ -7,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BeHostComponent implements OnInit {
 
+  regiao!: string;
+  telefone!: number;
+
+  cadastrar(){
+    console.log('Cadastro solicitado');
+    console.log('Região: ', this.regiao);
+    console.log('Telefone: ', this.telefone);
+
+  }
+
   constructor() { }
 
   ngOnInit(): void {

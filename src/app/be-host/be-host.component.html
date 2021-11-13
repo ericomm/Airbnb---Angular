@@ -1,11 +1,12 @@
 <section class="host-container">
 
-  <form class="formulario">
+  <form class="formulario" (ngSubmit)="cadastrar()">
     <h2 class="formulario__titulo">Cadastrar-se como anfitrião</h2>
 
     <div class="form-field">
       <label class="form-field__label" for="regiao">País/Região</label>
-      <input class="form-field__input" id="regiao" list="lista-regiao" placeholder="Brasil (+55)"/>
+      <input class="form-field__input" id="regiao" list="lista-regiao" placeholder="Brasil (+55)"
+      [(ngModel)]="regiao" name="regiao"/>
       <datalist id="lista-regiao">
 				<option>Brasil (+55)</option>
       </datalist>
@@ -13,7 +14,7 @@
 
     <div class="form-field">
       <label class="form-field__label" for="telefone">Telefone</label>
-      <input class="form-field__input" id="telefone" type="text"/>
+      <input class="form-field__input" id="telefone" type="text" [(ngModel)]="telefone" name="telefone"/>
     </div>
 
     <p class="informacoes">Ligaremos ou enviaremos uma mensagem para confirmar seu número.
