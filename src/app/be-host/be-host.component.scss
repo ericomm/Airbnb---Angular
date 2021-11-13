@@ -54,20 +54,26 @@
 }
 
 .botao {
-  background-color: #ff385c;
   color: white;
   display: block;
   flex: 1;
   border: none;
   border-radius: 4px;
+  border: 1px solid #ff385c;
+
   font-size: 16px;
   padding: 0.5em;
   cursor: pointer;
   transition: opacity 0.2s;
+  color: #ff385c;
+  background-color: white;
+
 
 
 
   &:hover {
     opacity: 0.8;
+    color: white;
+    background-color: #ff385c;
   }
 }
