@@ -9,10 +9,18 @@ import { ListHotelsComponent } from './list-hotels/list-hotels.component';
 import { BeHostComponent } from './be-host/be-host.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FootbarComponent } from './footbar/footbar.component';
 
 @NgModule({
-  declarations: [AppComponent, HomePageComponent, NavbarComponent, ListHotelsComponent, BeHostComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule,HttpClientModule],
+  declarations: [
+    AppComponent,
+    HomePageComponent,
+    NavbarComponent,
+    ListHotelsComponent,
+    BeHostComponent,
+    FootbarComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
