@@ -1,1 +1,26 @@
-<p>list-hotels works!</p>
+<section>
+    <div class="accommodation" *ngFor="let accommodation of accommodationsList">
+        <div class="accommodation-img">
+            <img [src]="accommodation.imagem">
+
+        </div>
+        <div class="accommodation-infos">
+            <a class="accommodation-title" href="/"><h2>{{accommodation.nomeHospedagem}}</h2></a>
+            <div class="accommodation-info-group">
+                <span>{{accommodation.hospedes}} Hóspedes</span>
+                <span>{{accommodation.quartos}} Quartos</span>
+                <span>{{accommodation.camas}} Camas</span>
+                <span>{{accommodation.banheiros}} Banheiros</span>
+            </div>
+            <div class="accommodation-info-group">
+                <span *ngIf="accommodation.wifi">Wi-fi</span>
+                <span *ngIf="accommodation.arCondicionado">Ar Condicionado</span>
+                <span *ngIf="accommodation.piscina">Piscina</span>
+            </div>
+            <span class="accommodation-value">
+               <strong>{{accommodation.valor | currency : 'BRL' : 'symbol' : '2.0-2' }}</strong> / noite
+            </span>
+            
+        </div>
+    </div>
+</section>

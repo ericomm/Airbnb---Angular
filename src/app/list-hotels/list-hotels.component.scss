@@ -1,0 +1,47 @@
+.accommodation {
+  display: flex;
+  padding: 32px;
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 0 4px 16px #cfcfcf;
+  margin-top: 30px;
+
+  &-img img {
+    height: 300px;
+    width: 450px;
+    border-radius: 10px;
+    display: flex;
+  }
+
+  &-title {
+    display: flex;
+    margin-bottom: 32px;
+  }
+
+  &-infos {
+    display: flex;
+    flex-direction: column;
+    margin-left: 32px;
+
+    > a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+  &-info-group {
+    margin-bottom: 4px;
+
+    span:not(:first-child)::before {
+      content: "•";
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+
+  &-value {
+    font-size: 20px;
+    display: flex;
+    margin: auto 0 0 auto;
+  }
+}

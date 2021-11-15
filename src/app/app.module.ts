@@ -8,10 +8,11 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ListHotelsComponent } from './list-hotels/list-hotels.component';
 import { BeHostComponent } from './be-host/be-host.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, HomePageComponent, NavbarComponent, ListHotelsComponent, BeHostComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule,HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
