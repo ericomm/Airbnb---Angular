@@ -8,9 +8,8 @@ describe('FootbarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FootbarComponent ]
-    })
-    .compileComponents();
+      declarations: [FootbarComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

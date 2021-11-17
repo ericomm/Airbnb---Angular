@@ -1,11 +1,11 @@
 <section>
     <div class="accommodation" *ngFor="let accommodation of accommodationsList">
         <div class="accommodation-img">
-            <img [src]="accommodation.imagem">
+            <a [routerLink]="['/detalhes', accommodation.id]"><img [src]="accommodation.imagem"></a>
 
         </div>
         <div class="accommodation-infos">
-            <a class="accommodation-title" href="/"><h2>{{accommodation.nomeHospedagem}}</h2></a>
+            <a class="accommodation-title" [routerLink]="['/detalhes', accommodation.id]"><h2>{{accommodation.nomeHospedagem}}</h2></a>
             <div class="accommodation-info-group">
                 <span>{{accommodation.hospedes}} Hóspedes</span>
                 <span>{{accommodation.quartos}} Quartos</span>

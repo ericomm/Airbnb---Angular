@@ -10,4 +10,5 @@ export interface Accommodation {
   wifi: boolean;
   arCondicionado: boolean;
   piscina: boolean;
+  descricao: string;
 }
