@@ -16,11 +16,16 @@
                 <span *ngIf="accommodation.wifi">Wi-fi</span>
                 <span *ngIf="accommodation.arCondicionado">Ar Condicionado</span>
                 <span *ngIf="accommodation.piscina">Piscina</span>
+                <span *ngIf="accommodation.diaria">Novembro</span>
+            </div>
+
+            <div class=accommodation-daily>
+              <span *ngIf="accommodation.diaria">Disponível: Novembro</span>
             </div>
             <span class="accommodation-value">
                <strong>{{accommodation.valor | currency : 'BRL' : 'symbol' : '2.0-2' }}</strong> / noite
             </span>
-            
+
         </div>
     </div>
 </section>

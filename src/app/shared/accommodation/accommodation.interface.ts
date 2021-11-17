@@ -11,4 +11,5 @@ export interface Accommodation {
   arCondicionado: boolean;
   piscina: boolean;
   descricao: string;
+  diaria: string;
 }
