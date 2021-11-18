@@ -1,4 +1,3 @@
-//Install express server
 const express = require('express');
 const path = require('path');
 
@@ -8,7 +7,7 @@ const app = express();
 app.use(express.static('./dist/Airbnb-Angular'));
 
 app.get('/*', (req, res) =>
-    res.sendFile('index.html', {root: './dist/Airbnb-Angular'}),
+    res.sendFile('index.html', {root: 'dist/Airbnb-Angular/'}),
 );
 
 // Start the app by listening on the default Heroku port
