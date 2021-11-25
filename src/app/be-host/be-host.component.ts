@@ -7,21 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BeHostComponent implements OnInit {
 
-  regiao!: string;
-  telefone!: string;
+  nome!: string;
+  email!: string;
 
   cadastrar(){
     console.log('Cadastro solicitado');
-    console.log('Região: ', this.regiao);
-    console.log('Telefone: ', this.telefone);
+    console.log('nome: ', this.nome);
+    console.log('email: ', this.email);
 
     this.limparCampos();
 
   }
 
   limparCampos(){
-    this.regiao ='';
-    this.telefone = '';
+    this.nome ='';
+    this.email = '';
 
   }
 
