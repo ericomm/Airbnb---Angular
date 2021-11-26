@@ -4,7 +4,7 @@
             <a [routerLink]="['/detalhes', accommodation.id]"><img [src]="accommodation.imagem"></a>
 
         </div>
-        <div class="accommodation-infos">
+        <div class="accommodation-infos" [routerLink]="['/detalhes', accommodation.id]">
             <a class="accommodation-title" [routerLink]="['/detalhes', accommodation.id]"><h2>{{accommodation.nomeHospedagem}}</h2></a>
             <div class="accommodation-info-group">
                 <span>{{accommodation.hospedes}} Hóspedes</span>

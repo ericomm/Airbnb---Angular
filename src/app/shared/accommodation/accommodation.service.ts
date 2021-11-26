@@ -11,11 +11,13 @@ import { environment } from 'src/environments/environment';
 export class AccommodationService {
   public constructor(private httpClient: HttpClient) {}
 
+  private readonly accommodationPath: string ="hospedagem";
+
   public getAccommodations(): Observable<Accommodation[]> {
-    return this.httpClient.get<Accommodation[]>(environment.API_URL);
+    return this.httpClient.get<Accommodation[]>(`${environment.API_URL}/${this.accommodationPath}`);
   }
 
   public getAccommodation(id: number): Observable<Accommodation> {
-    return this.httpClient.get<Accommodation>(`${environment.API_URL}/${id}`);
+    return this.httpClient.get<Accommodation>(`${environment.API_URL}/${this.accommodationPath}/${id}`);
   }
 }
