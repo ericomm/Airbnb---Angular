@@ -23,7 +23,8 @@ import { RegisterInterestComponent } from './register-interest/register-interest
     FootbarComponent,
     AccommodationDetailsComponent,
     RegisterInterestComponent,
-  ],
+
+   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

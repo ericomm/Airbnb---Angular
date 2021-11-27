@@ -7,6 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterInterestComponent implements OnInit {
 
+  nome!: string;
+  email!: string;
+
+  registrar(){
+    console.log('Resgistro solicitado');
+    console.log('nome: ', this.nome);
+    console.log('email: ', this.email);
+
+    this.limparCampos();
+
+  }
+
+  limparCampos(){
+    this.nome ='';
+    this.email = '';
+
+  }
+
   constructor() { }
 
   ngOnInit(): void {
