@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FootbarComponent } from './footbar/footbar.component';
 import { AccommodationDetailsComponent } from './accommodation-details/accommodation-details.component';
+import { RegisterInterestComponent } from './register-interest/register-interest.component';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,10 @@ import { AccommodationDetailsComponent } from './accommodation-details/accommoda
     BeHostComponent,
     FootbarComponent,
     AccommodationDetailsComponent,
-  ],
+    RegisterInterestComponent,
+    
+
+   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
