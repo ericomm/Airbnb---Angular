@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'airbnb-register-interest',
@@ -15,17 +16,14 @@ export class RegisterInterestComponent implements OnInit {
     console.log('nome: ', this.nome);
     console.log('email: ', this.email);
 
-    this.limparCampos();
-
+    if (confirm("Confirmar Interesse")) {
+      this.router.navigate(['/']);
+    } 
   }
 
-  limparCampos(){
-    this.nome ='';
-    this.email = '';
+ 
 
-  }
-
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }

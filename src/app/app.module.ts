@@ -13,6 +13,7 @@ import { FootbarComponent } from './footbar/footbar.component';
 import { AccommodationDetailsComponent } from './accommodation-details/accommodation-details.component';
 import { RegisterInterestComponent } from './register-interest/register-interest.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { RegisterInterestComponent } from './register-interest/register-interest
     FootbarComponent,
     AccommodationDetailsComponent,
     RegisterInterestComponent,
+    
 
    ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
