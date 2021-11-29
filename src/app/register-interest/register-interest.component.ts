@@ -1,31 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'airbnb-register-interest',
   templateUrl: './register-interest.component.html',
-  styleUrls: ['./register-interest.component.scss']
+  styleUrls: ['./register-interest.component.scss'],
 })
-export class RegisterInterestComponent implements OnInit {
-
+export class RegisterInterestComponent {
   nome!: string;
   email!: string;
 
-  registrar(){
-    console.log('Resgistro solicitado');
-    console.log('nome: ', this.nome);
-    console.log('email: ', this.email);
+  public constructor(private router: Router, private route: ActivatedRoute) {}
 
-    if (confirm("Confirmar Interesse")) {
-      this.router.navigate(['/']);
-    } 
+  public registrarInteresse(): void {
+    if (confirm('Tem certeza de que deseja registrar interesse nessa hospedagem?')) {
+      const currentInterestList: Array<number> = JSON.parse(localStorage.getItem('interestList'));
+      localStorage.setItem('interestList', JSON.stringify([...currentInterestList, Number(this.route.snapshot.params['id'])]));
+      this.router.navigate(['/lista']);
+    }
   }
-
- 
-
-  constructor(private router: Router) { }
-
-  ngOnInit(): void {
-  }
-
 }

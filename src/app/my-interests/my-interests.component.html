@@ -1,0 +1,33 @@
+<section>
+    <h1 class="empty-list" *ngIf="myInterests.length === 0">
+        Não há nenhum interesse registrado ainda.
+    </h1>
+    <div class="interest-wrapper" *ngFor="let interest of myInterests">
+        <div class="interest" [routerLink]="['/detalhes', interest.id]">
+            <button type="button" class="interest-remove-button" (click)="deleteInterest(interest.id)">&times;</button>
+            <div class="interest-img">
+                <img [src]="interest.imagem">
+            </div>
+            <div class="interest-infos">
+                <a class="interest-title">
+                    <h2>{{ interest.nomeHospedagem }}</h2>
+                </a>
+                <div class="interest-info-group">
+                    <span>{{ interest.hospedes }} Hóspedes</span>
+                    <span>{{ interest.quartos }} Quartos</span>
+                    <span>{{ interest.camas }} Camas</span>
+                    <span>{{ interest.banheiros }} Banheiros</span>
+                </div>
+                <div class="interest-info-group">
+                    <span *ngIf="interest.wifi">Wi-fi</span>
+                    <span *ngIf="interest.arCondicionado">Ar Condicionado</span>
+                    <span *ngIf="interest.piscina">Piscina</span>
+                    <span *ngIf="interest.diaria">Novembro</span>
+                </div>
+                <span class="interest-value">
+                    <strong>{{ interest.valor | currency : 'BRL' : 'symbol' : '2.0-2' }}</strong> / noite
+                </span>
+            </div>
+        </div>
+    </div>
+</section>

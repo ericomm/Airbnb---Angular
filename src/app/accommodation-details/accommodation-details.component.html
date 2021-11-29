@@ -1,38 +1,34 @@
-<div class="details">
-    <a href="/lista">
-        <h2>{{ accommodation.nomeHospedagem }}</h2>
-    </a>
-
-    <a
-        href="https://www.google.com/maps/d/u/0/embed?mid=1wi6GcRuzWtrm5ZyFtyfoX31Llrc&msa=0&hl=pt-BR&ie=UTF8&ll=-27.532539362635873%2C-48.48586&spn=0.190709%2C0.209077&output=embed&z=12">Florianópolis,
-        Santa Catarina, Brasil</a>
-    <div class="details-img">
-        <img [src]="accommodation.imagem">
+<section class="details-section">
+    <div class="details">
+        <h2>{{ accommodation?.nomeHospedagem }}</h2>
+        <a
+            href="https://www.google.com/maps/d/u/0/embed?mid=1wi6GcRuzWtrm5ZyFtyfoX31Llrc&msa=0&hl=pt-BR&ie=UTF8&ll=-27.532539362635873%2C-48.48586&spn=0.190709%2C0.209077&output=embed&z=12">Florianópolis,
+            Santa Catarina, Brasil</a>
+        <div class="details-img">
+            <img [src]="accommodation?.imagem">
+        </div>
+        <div class="details-infos">
+            <div class="details-info-group">
+                <span>{{ accommodation?.hospedes }} Hóspedes</span>
+                <span>{{ accommodation?.quartos }} Quartos</span>
+                <span>{{ accommodation?.camas }} Camas</span>
+                <span>{{ accommodation?.banheiros }} Banheiros</span>
+            </div>
+            <div class="details-info-group">
+                <span *ngIf="accommodation?.wifi">Wi-fi</span>
+                <span *ngIf="accommodation?.arCondicionado">Ar Condicionado</span>
+                <span *ngIf="accommodation?.piscina">Piscina</span>
+            </div>
+            <div class="details-description">
+                <span><b>Descrição: </b>{{ accommodation?.descricao }}</span>
+            </div>
+            <span class="details-value">
+                <strong>{{ accommodation?.valor | currency : 'BRL' : 'symbol' : '2.0-2' }}</strong> / noite
+            </span>
+            <div class="details-footer" *ngIf="!hasInterest(accommodation?.id)">
+                <button class="details-button" [routerLink]="['/interesse', accommodation?.id]">Registrar
+                    Interesse</button>
+            </div>
+        </div>
     </div>
-    <div class="details-infos">
-        <div class="details-info-group">
-            <span>{{accommodation.hospedes}} Hóspedes</span>
-            <span>{{accommodation.quartos}} Quartos</span>
-            <span>{{accommodation.camas}} Camas</span>
-            <span>{{accommodation.banheiros}} Banheiros</span>
-        </div>
-        <div class="details-info-group">
-            <span *ngIf="accommodation.wifi">Wi-fi</span>
-            <span *ngIf="accommodation.arCondicionado">Ar Condicionado</span>
-            <span *ngIf="accommodation.piscina">Piscina</span>
-        </div>
-        <div class="details-description">
-            <span><b>Descrição: </b>{{accommodation.descricao}}</span>
-
-        </div>
-        <span class="details-value">
-            <strong>{{accommodation.valor | currency : 'BRL' : 'symbol' : '2.0-2' }}</strong> / noite
-
-        </span>
-        <div class="details-footer">
-            <button class="details-button" routerLink="/interesse">Registrar Interesse</button>
-        </div>
-        
-    </div>
-
-</div>
+</section>

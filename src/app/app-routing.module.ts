@@ -6,13 +6,15 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { AccommodationDetailsComponent } from './accommodation-details/accommodation-details.component';
 import { AccommodationsListComponent } from './accommodations-list/accommodations-list.component';
 import { RegisterInterestComponent } from './register-interest/register-interest.component';
+import { MyInterestsComponent } from './my-interests/my-interests.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'lista', component: AccommodationsListComponent },
   { path: 'anfitriao', component: BeHostComponent },
   { path: 'detalhes/:id', component: AccommodationDetailsComponent },
-  {path:'interesse',component: RegisterInterestComponent},
+  { path: 'interesse/:id', component: RegisterInterestComponent },
+  { path: 'interesses', component: MyInterestsComponent },
 ];
 
 @NgModule({

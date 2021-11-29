@@ -1,17 +1,16 @@
-.container {
-    margin-top: 40px;
-    padding: 0 140px;
-    display: flex;
-    justify-content: center;
-    flex: 1;
-
-    &-wrapper {
-        display: flex;
-        height: calc(100vh - 80px);
-        flex-direction: column;
-    }
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  height: calc(100vh - 80px);
 }
 
-footer {
-    margin-top: 32px;
+.container {
+  flex: 1;
+  padding: 40px 140px 0;
+}
+
+.footer {
+  margin-top: 92px;
+  padding: 0 40px;
 }

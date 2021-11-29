@@ -1,104 +1,127 @@
-.home-container {
-    background-color: black;
+.video {
+  &-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: calc(100vh - 80px);
-    width: 100vw;
+    width: calc(100% + 280px);
     margin-top: -40px;
-    padding: 40px 140px 0;
+    margin-left: -140px;
+    background-color: black;
+  }
 
-    .video-container {
-        position: relative;
-        max-height: 70vh;
-        max-width: 100%;
-        overflow: hidden;
-        border-radius: 12px;
+  &-box {
+    position: relative;
+    height: 70vh;
+    width: 80vw;
+    overflow: hidden;
+    border-radius: 12px;
+  }
 
-        .video-info {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            top: calc((70vh / 2) - 132px);
-            left: calc(((100vw - 280px) / 2) - 300px);
-            padding: 60px;
-            width: 600px;
-            height: 264px;
-            border-radius: 12px;
+  &-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: calc(50% - 132px);
+    left: calc(50% - 300px);
+    padding: 60px;
+    width: 600px;
+    height: 264px;
+    border-radius: 12px;
 
-            &-text {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                font-size: 26px;
-                font-weight: 300;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                color: white;
+    &-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 26px;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: white;
 
-                > span {
-                    display: block;
-                    padding: 2px 8px;
-                    background-color: #ff385c;
+      > span {
+        display: block;
+        padding: 2px 8px;
+        background-color: #ff385c;
 
-
-                    + span {
-                        width: 280px;
-                    }
-                }
-            }
-
-
-
-            .form-field {
-              width: 40%;
-              margin-top: 15px;
-              margin-bottom: 15px;
-              display: flex;
-              flex-direction: column;
-
-
-
-              &__label {
-                color: #000;
-                font-weight: bold;
-                margin-bottom: 4px;
-                font-size: 14px;
-
-
-              }
-
-              &__input {
-                padding: 8px;
-                border-radius: 4px;
-                color: #000;
-                border: 2px solid;
-                outline: none;
-                border-radius: 24px;
-
-              }
-            }
-
-
-
-            &-button {
-                width: 180px;
-                height: 40px;
-                margin-top: 30px;
-                border: 1px solid #ff385c;
-                border-radius: 24px;
-                font-size: 18px;
-                font-weight: 300;
-                color: #ff385c;
-                background-color: white;
-                cursor: pointer;
-
-                &:hover {
-                    color: white;
-                    background-color: #ff385c;
-                }
-            }
+        + span {
+          width: 280px;
         }
+      }
     }
+
+    &-button {
+      width: 180px;
+      height: 40px;
+      margin-top: 30px;
+      border: 1px solid #ff385c;
+      border-radius: 24px;
+      font-size: 18px;
+      font-weight: 300;
+      color: #ff385c;
+      background-color: white;
+      cursor: pointer;
+
+      &:hover {
+        color: white;
+        background-color: #ff385c;
+      }
+    }
+  }
 }
 
+.inspirations {
+  &-title {
+    margin-top: 92px;
+    font-size: 42px;
+    font-weight: 500;
+  }
 
+  &-cards {
+    margin-top: 48px;
+    display: flex;
+  }
+
+  &-card {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 380px;
+    border-radius: 16px;
+    overflow: hidden;
+
+    &-image {
+      height: 55%;
+      width: 100%;
+    }
+
+    &-title {
+      margin: 18px;
+      font-size: 28px;
+      font-weight: 600;
+      color: white;
+    }
+
+    + .inspirations-card {
+      margin-left: 24px;
+    }
+
+    &:nth-child(1) {
+      background-image: linear-gradient(to right, #bd1e70, #f53e31);
+    }
+
+    &:nth-child(2) {
+      background-image: linear-gradient(to right, #f53e31, #d6642f);
+    }
+
+    &:nth-child(3) {
+      background-image: linear-gradient(to right, #d6642f, #e49621);
+    }
+
+    &:nth-child(4) {
+      background-image: linear-gradient(to right, #e49621, #e9bf4c);
+    }
+  }
+}

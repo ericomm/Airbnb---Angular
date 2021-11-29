@@ -1,5 +1,6 @@
-.accommodation {
+.interest {
   display: flex;
+  position: relative;
   padding: 32px;
   border-radius: 10px;
   box-shadow: 0 4px 16px #cfcfcf;
@@ -8,10 +9,9 @@
   &-wrapper {
     display: flex;
     justify-content: center;
-    width: 100%;
 
-    > .accommodation {
-      margin-bottom: 30px;
+    + .interest-wrapper {
+      margin-top: 30px;
     }
   }
 
@@ -48,10 +48,32 @@
     }
   }
 
+  &-daily {
+    margin: auto 0 0 auto;
+  }
+
   &-value {
     font-size: 20px;
     display: flex;
     margin: auto 0 0 auto;
+  }
+
+  &-remove-button {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    right: -15px;
+    top: -15px;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    background-color: #ff385c;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken(#ff385c, 30);
+    }
   }
 }
 

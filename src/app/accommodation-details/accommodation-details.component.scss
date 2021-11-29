@@ -1,8 +1,12 @@
 .details {
   padding: 32px;
   border-radius: 10px;
-  width: 100%;
   box-shadow: 0 4px 16px #cfcfcf;
+
+  &-section {
+    display: flex;
+    justify-content: center;
+  }
 
   > h2 {
     margin-bottom: 15px;
@@ -50,7 +54,7 @@
     margin-top: 50px;
     font-size: 18px;
   }
-  &-footer{
+  &-footer {
     display: flex;
     justify-content: center;
   }
@@ -65,7 +69,6 @@
     color: #ff385c;
     background-color: white;
     cursor: pointer;
-    
 
     &:hover {
       color: white;

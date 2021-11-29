@@ -1,0 +1,41 @@
+.footer {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  height: 220px;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 0 80px;
+
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &-first-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  &-about {
+    margin-top: 16px;
+  }
+
+  &-navigation {
+    display: flex;
+
+    li + li {
+      margin-left: 16px;
+    }
+  }
+
+  &-social-links {
+    display: flex;
+
+    li {
+      padding: 10px 16px;
+    }
+  }
+}
