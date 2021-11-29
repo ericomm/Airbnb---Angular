@@ -2,9 +2,17 @@
   display: flex;
   padding: 32px;
   border-radius: 10px;
-  width: 100%;
   box-shadow: 0 4px 16px #cfcfcf;
-  margin-top: 30px;
+
+  &-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    + .accommodation-wrapper {
+      margin-top: 30px;
+    }
+  }
 
   &-img img {
     height: 300px;
@@ -22,7 +30,7 @@
     display: flex;
     flex-direction: column;
     margin-left: 32px;
-    cursor: pointer; 
+    cursor: pointer;
 
     > a {
       text-decoration: none;
@@ -32,7 +40,6 @@
 
   &-info-group {
     margin-bottom: 4px;
-    
 
     span:not(:first-child)::before {
       content: "•";
@@ -41,10 +48,8 @@
     }
   }
 
-  &-daily{
+  &-daily {
     margin: auto 0 0 auto;
-
-
   }
 
   &-value {
@@ -52,4 +57,10 @@
     display: flex;
     margin: auto 0 0 auto;
   }
+}
+
+.empty-list {
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 8vh;
+  font-size: 26px;
 }

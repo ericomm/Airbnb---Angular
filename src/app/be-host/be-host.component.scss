@@ -1,16 +1,14 @@
 .host-container {
   max-width: 500px;
-  padding: 30px;
   margin: 0 auto;
 }
-
-
 
 .formulario {
   background-color: white;
   padding: 16px;
   border-radius: 4px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+
   &__titulo {
     color: black;
   }
@@ -43,6 +41,7 @@
   font-size: 12px;
   text-align: justify;
   margin-bottom: 15px;
+
   & a{
     color: black;
   }
@@ -60,7 +59,6 @@
   border: none;
   border-radius: 4px;
   border: 1px solid #ff385c;
-
   font-size: 16px;
   padding: 0.5em;
   cursor: pointer;

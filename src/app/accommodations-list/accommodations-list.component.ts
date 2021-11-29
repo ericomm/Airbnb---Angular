@@ -20,4 +20,12 @@ export class AccommodationsListComponent implements OnInit {
       this.accommodationsList = accommodationsList
     });
   }
+
+  public hasInterest(id: number): boolean {
+    return !JSON.parse(localStorage.getItem('interestList')).includes(id.toString());
+  }
+
+  public getInterestList(): Array<string> {
+    return JSON.parse(localStorage.getItem('interestList'));
+  }
 }
