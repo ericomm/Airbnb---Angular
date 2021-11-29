@@ -75,8 +75,8 @@
 .inspirations {
   &-title {
     margin-top: 92px;
-    font-size: 46px;
-    font-weight: 400;
+    font-size: 42px;
+    font-weight: 500;
   }
 
   &-cards {
@@ -87,17 +87,20 @@
   &-card {
     display: flex;
     flex-direction: column;
-    flex: 1;
-    height: 500px;
+    width: 300px;
+    height: 380px;
     border-radius: 16px;
+    overflow: hidden;
 
     &-image {
-      
+      height: 55%;
+      width: 100%;
     }
 
     &-title {
-      margin: 24px;
+      margin: 18px;
       font-size: 28px;
+      font-weight: 600;
       color: white;
     }
 
@@ -106,11 +109,11 @@
     }
 
     &:nth-child(1) {
-      background-image: linear-gradient(to right, #bd1e70, #f53155);
+      background-image: linear-gradient(to right, #bd1e70, #f53e31);
     }
 
     &:nth-child(2) {
-      background-image: linear-gradient(to right, #f53155, #d6642f);
+      background-image: linear-gradient(to right, #f53e31, #d6642f);
     }
 
     &:nth-child(3) {
