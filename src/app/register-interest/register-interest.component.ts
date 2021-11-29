@@ -15,7 +15,7 @@ export class RegisterInterestComponent {
   public registrarInteresse(): void {
     if (confirm('Confirmar Interesse')) {
       const currentInterestList: Array<number> = JSON.parse(localStorage.getItem('interestList'));
-      localStorage.setItem('interestList', JSON.stringify([...currentInterestList, this.route.snapshot.params['id']]));
+      localStorage.setItem('interestList', JSON.stringify([...currentInterestList, Number(this.route.snapshot.params['id'])]));
       this.router.navigate(['/lista']);
     }
   }

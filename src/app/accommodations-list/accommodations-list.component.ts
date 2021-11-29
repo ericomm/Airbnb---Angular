@@ -22,7 +22,7 @@ export class AccommodationsListComponent implements OnInit {
   }
 
   public hasInterest(id: number): boolean {
-    return !JSON.parse(localStorage.getItem('interestList')).includes(id.toString());
+    return !JSON.parse(localStorage.getItem('interestList')).includes(id);
   }
 
   public getInterestList(): Array<string> {

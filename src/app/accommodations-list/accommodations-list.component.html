@@ -1,4 +1,8 @@
 <section>
+    <h1 class="empty-list"
+        *ngIf="(accommodationsList.length === getInterestList().length) || (accommodationsList.length === 0)">
+        Não há nenhuma hospedagem disponível.
+    </h1>
     <div class="accommodation-wrapper" *ngFor="let accommodation of accommodationsList">
         <div class="accommodation" *ngIf="hasInterest(accommodation.id)">
             <div class="accommodation-img">
@@ -6,13 +10,13 @@
             </div>
             <div class="accommodation-infos" [routerLink]="['/detalhes', accommodation.id]">
                 <a class="accommodation-title" [routerLink]="['/detalhes', accommodation.id]">
-                    <h2>{{accommodation.nomeHospedagem}}</h2>
+                    <h2>{{ accommodation.nomeHospedagem }}</h2>
                 </a>
                 <div class="accommodation-info-group">
-                    <span>{{accommodation.hospedes}} Hóspedes</span>
-                    <span>{{accommodation.quartos}} Quartos</span>
-                    <span>{{accommodation.camas}} Camas</span>
-                    <span>{{accommodation.banheiros}} Banheiros</span>
+                    <span>{{ accommodation.hospedes }} Hóspedes</span>
+                    <span>{{ accommodation.quartos }} Quartos</span>
+                    <span>{{ accommodation.camas }} Camas</span>
+                    <span>{{ accommodation.banheiros }} Banheiros</span>
                 </div>
                 <div class="accommodation-info-group">
                     <span *ngIf="accommodation.wifi">Wi-fi</span>
@@ -25,13 +29,9 @@
                     <span *ngIf="accommodation.diaria">Disponível: Novembro</span>
                 </div>
                 <span class="accommodation-value">
-                    <strong>{{accommodation.valor | currency : 'BRL' : 'symbol' : '2.0-2' }}</strong> / noite
+                    <strong>{{ accommodation.valor | currency : 'BRL' : 'symbol' : '2.0-2' }}</strong> / noite
                 </span>
             </div>
         </div>
     </div>
-    <h1 class="empty-list"
-        *ngIf="(accommodationsList.length === getInterestList().length) || (accommodationsList.length === 0)">
-        Não há nenhuma hospedagem disponível.
-    </h1>
 </section>

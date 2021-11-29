@@ -12,6 +12,7 @@ import { BeHostComponent } from './be-host/be-host.component';
 import { FooterComponent } from './footer/footer.component';
 import { AccommodationDetailsComponent } from './accommodation-details/accommodation-details.component';
 import { RegisterInterestComponent } from './register-interest/register-interest.component';
+import { MyInterestsComponent } from './my-interests/my-interests.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { RegisterInterestComponent } from './register-interest/register-interest
     FooterComponent,
     AccommodationDetailsComponent,
     RegisterInterestComponent,
+    MyInterestsComponent,
     
 
    ],
