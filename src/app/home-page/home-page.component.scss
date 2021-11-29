@@ -1,71 +1,124 @@
-.home-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: calc(100vh - 80px);
-  width: calc(100% + 280px);
-  margin-top: -40px;
-  margin-left: -140px;
-  background-color: black;
+.video {
+  &-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px);
+    width: calc(100% + 280px);
+    margin-top: -40px;
+    margin-left: -140px;
+    background-color: black;
+  }
 
-  .video-container {
+  &-box {
     position: relative;
     height: 70vh;
     width: 80vw;
     overflow: hidden;
     border-radius: 12px;
+  }
 
-    .video-info {
+  &-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: calc(50% - 132px);
+    left: calc(50% - 300px);
+    padding: 60px;
+    width: 600px;
+    height: 264px;
+    border-radius: 12px;
+
+    &-text {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      position: absolute;
-      top: calc(50% - 132px);
-      left: calc(50% - 300px);
-      padding: 60px;
-      width: 600px;
-      height: 264px;
-      border-radius: 12px;
+      font-size: 26px;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: white;
 
-      &-text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-size: 26px;
-        font-weight: 300;
-        text-transform: uppercase;
-        letter-spacing: 1px;
+      > span {
+        display: block;
+        padding: 2px 8px;
+        background-color: #ff385c;
+
+        + span {
+          width: 280px;
+        }
+      }
+    }
+
+    &-button {
+      width: 180px;
+      height: 40px;
+      margin-top: 30px;
+      border: 1px solid #ff385c;
+      border-radius: 24px;
+      font-size: 18px;
+      font-weight: 300;
+      color: #ff385c;
+      background-color: white;
+      cursor: pointer;
+
+      &:hover {
         color: white;
-
-        > span {
-          display: block;
-          padding: 2px 8px;
-          background-color: #ff385c;
-
-          + span {
-            width: 280px;
-          }
-        }
+        background-color: #ff385c;
       }
+    }
+  }
+}
 
-      &-button {
-        width: 180px;
-        height: 40px;
-        margin-top: 30px;
-        border: 1px solid #ff385c;
-        border-radius: 24px;
-        font-size: 18px;
-        font-weight: 300;
-        color: #ff385c;
-        background-color: white;
-        cursor: pointer;
+.inspirations {
+  &-title {
+    margin-top: 92px;
+    font-size: 46px;
+    font-weight: 400;
+  }
 
-        &:hover {
-          color: white;
-          background-color: #ff385c;
-        }
-      }
+  &-cards {
+    margin-top: 48px;
+    display: flex;
+  }
+
+  &-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 500px;
+    border-radius: 16px;
+
+    &-image {
+      
+    }
+
+    &-title {
+      margin: 24px;
+      font-size: 28px;
+      color: white;
+    }
+
+    + .inspirations-card {
+      margin-left: 24px;
+    }
+
+    &:nth-child(1) {
+      background-image: linear-gradient(to right, #bd1e70, #f53155);
+    }
+
+    &:nth-child(2) {
+      background-image: linear-gradient(to right, #f53155, #d6642f);
+    }
+
+    &:nth-child(3) {
+      background-image: linear-gradient(to right, #d6642f, #e49621);
+    }
+
+    &:nth-child(4) {
+      background-image: linear-gradient(to right, #e49621, #e9bf4c);
     }
   }
 }

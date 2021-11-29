@@ -3,7 +3,7 @@
         Não há nenhum interesse registrado ainda.
     </h1>
     <div class="interest-wrapper" *ngFor="let interest of myInterests">
-        <div class="interest">
+        <div class="interest" [routerLink]="['/detalhes', interest.id]">
             <button type="button" class="interest-remove-button" (click)="deleteInterest(interest.id)">&times;</button>
             <div class="interest-img">
                 <img [src]="interest.imagem">

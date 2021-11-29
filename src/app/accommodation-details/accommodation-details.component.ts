@@ -24,4 +24,8 @@ export class AccommodationDetailsComponent implements OnInit {
         this.accommodation = accommodationId
       });
   }
+
+  public hasInterest(id: number): boolean {
+    return JSON.parse(localStorage.getItem('interestList')).includes(id);
+  }
 }

@@ -13,7 +13,7 @@ export class RegisterInterestComponent {
   public constructor(private router: Router, private route: ActivatedRoute) {}
 
   public registrarInteresse(): void {
-    if (confirm('Confirmar Interesse')) {
+    if (confirm('Tem certeza de que deseja registrar interesse nessa hospedagem?')) {
       const currentInterestList: Array<number> = JSON.parse(localStorage.getItem('interestList'));
       localStorage.setItem('interestList', JSON.stringify([...currentInterestList, Number(this.route.snapshot.params['id'])]));
       this.router.navigate(['/lista']);

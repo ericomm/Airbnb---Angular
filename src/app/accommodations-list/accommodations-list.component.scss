@@ -3,14 +3,15 @@
   padding: 32px;
   border-radius: 10px;
   box-shadow: 0 4px 16px #cfcfcf;
+  cursor: pointer;
 
   &-wrapper {
     display: flex;
     justify-content: center;
     width: 100%;
 
-    + .accommodation-wrapper {
-      margin-top: 30px;
+    > .accommodation {
+      margin-bottom: 30px;
     }
   }
 
@@ -30,7 +31,6 @@
     display: flex;
     flex-direction: column;
     margin-left: 32px;
-    cursor: pointer;
 
     > a {
       text-decoration: none;
@@ -46,10 +46,6 @@
       margin-left: 10px;
       margin-right: 10px;
     }
-  }
-
-  &-daily {
-    margin: auto 0 0 auto;
   }
 
   &-value {
